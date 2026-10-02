@@ -1,0 +1,98 @@
+[
+  {
+    "id": "fsa-mrm-001",
+    "title": "Article 38-2 prohibition on definitive judgments in solicitation",
+    "category": "definitive_judgment",
+    "source": "金融商品取引法 Article 38-2, overview note",
+    "tags": ["article-38-2", "definitive", "judgment", "solicitation", "misleading"],
+    "content": "When soliciting a customer, a firm must not provide a 断定的判断 (definitive or assertive judgment) on a matter that is inherently uncertain, such as the future price movement of a security. The prohibition applies regardless of the channel or format the statement is delivered in, including automated or AI-generated trading commentary. A statement that presents an uncertain outcome as settled fact is the core violation pattern this provision targets."
+  },
+  {
+    "id": "fsa-mrm-002",
+    "title": "AI-generated output and the definitive-judgment prohibition",
+    "category": "definitive_judgment",
+    "source": "FSA AI Model Risk Management Guidance, Q3 2026 draft, solicitation chapter",
+    "tags": ["ai", "definitive", "judgment", "output review", "trading recommendation"],
+    "content": "An AI-generated trading recommendation must be reviewed for absolute or promissory phrasing before it reaches a customer, because automated text generation can drift into assertive wording without an explicit instruction to do so. Review should specifically check for phrasing that presents a future price movement or return as settled, rather than as one possible scenario among several."
+  },
+  {
+    "id": "fsa-mrm-003",
+    "title": "業務改善命令 precedent — definitive-judgment solicitation failures",
+    "category": "definitive_judgment",
+    "source": "業務改善命令 precedent digest, solicitation-conduct chapter",
+    "tags": ["gyomu-kaizen-meirei", "precedent", "enforcement", "definitive", "remediation"],
+    "content": "A 業務改善命令 (business improvement order) was issued to a firm whose retail solicitation scripts repeatedly presented uncertain return scenarios as settled outcomes. The remediation plan required a documented pre-release review step for all customer-facing solicitation text, including any text produced by an automated system, and periodic sampling to confirm the review step was actually followed."
+  },
+  {
+    "id": "fsa-mrm-004",
+    "title": "FSA AI Model Risk Management Guidance — documentation baseline",
+    "category": "mrm_documentation",
+    "source": "FSA AI Model Risk Management Guidance, Q3 2026 draft, documentation chapter",
+    "tags": ["mrm", "model risk", "documentation", "model card", "guidance"],
+    "content": "Every AI system used in a customer-facing trading workflow should have a model card describing its purpose, training data provenance, known limitations, and intended use boundaries, a validation record from its most recent review cycle, and a risk-tier classification reflecting the potential customer impact of an error. The documentation baseline exists so a reviewer can assess a model's fitness for continued use without re-deriving that assessment from scratch each time."
+  },
+  {
+    "id": "fsa-mrm-005",
+    "title": "Model inventory and validation cadence requirements",
+    "category": "mrm_documentation",
+    "source": "FSA AI Model Risk Management Guidance, Q3 2026 draft, inventory chapter",
+    "tags": ["model inventory", "validation", "cadence", "governance", "documentation"],
+    "content": "Firms should maintain a model inventory entry for every production AI model, refreshed at least annually or after any material change to the model or its inputs. Each inventory entry records the model's validation test results for its current cycle, so a reviewer can confirm the model was actually re-tested rather than assuming continued validity from its original approval."
+  },
+  {
+    "id": "fsa-mrm-006",
+    "title": "Model owner accountability under the MRM framework",
+    "category": "mrm_documentation",
+    "source": "FSA AI Model Risk Management Guidance, Q3 2026 draft, accountability chapter",
+    "tags": ["model owner", "accountability", "risk tier", "governance"],
+    "content": "Each AI model should have a single named owner accountable for the model's periodic review sign-off, its risk-tier reassessment when usage changes, and for coordinating remediation when a validation test fails. Diffuse or unassigned ownership is itself flagged as a documentation gap during a review."
+  },
+  {
+    "id": "fsa-mrm-007",
+    "title": "48-hour incident notification duty for AI trading systems",
+    "category": "incident_notification",
+    "source": "Incident notification procedure summary, AI trading systems annex",
+    "tags": ["incident", "notification", "48-hour", "reportable", "fsa"],
+    "content": "A material incident involving an AI trading system should be reported to the FSA within 48 hours of the firm becoming aware of it, together with a preliminary description of the event, the affected customers or transactions, and the immediate containment steps taken. A fuller root-cause report follows once the investigation completes; the 48-hour window covers the initial notification, not the full analysis."
+  },
+  {
+    "id": "fsa-mrm-008",
+    "title": "Materiality thresholds for AI-incident reporting",
+    "category": "incident_notification",
+    "source": "Incident notification procedure summary, materiality-assessment annex",
+    "tags": ["materiality", "threshold", "incident", "reporting", "escalation"],
+    "content": "An event is treated as material for notification purposes when it causes measurable customer harm, produces systemic mispricing across multiple accounts, or reflects a repeated pattern of definitive-judgment breaches rather than an isolated wording slip. Firms should document the materiality assessment itself, not only the conclusion, so a later review can trace how the threshold was applied."
+  },
+  {
+    "id": "fsa-mrm-009",
+    "title": "Evidence preservation duties during an incident review",
+    "category": "incident_notification",
+    "source": "Incident notification procedure summary, evidence-preservation annex",
+    "tags": ["evidence", "preservation", "logs", "incident", "records"],
+    "content": "Once an incident is identified, firms should preserve the logs and model outputs relevant to it for the duration of the review period, without alteration. This includes the specific AI-generated text a customer received, the model version and configuration in effect at the time, and any human review actions taken on that output."
+  },
+  {
+    "id": "fsa-mrm-010",
+    "title": "Mandatory human-oversight gate before customer-facing AI output",
+    "category": "human_oversight",
+    "source": "Human-oversight procedure summary, customer-facing AI output annex",
+    "tags": ["human oversight", "review", "approval", "customer-facing", "gate"],
+    "content": "A qualified reviewer should approve an AI-generated trading recommendation before it reaches a customer. The oversight gate is a control point, not a formality — bypassing it, even when the reviewer would likely have approved the output anyway, is itself treated as a control failure independent of whether the underlying content was accurate."
+  },
+  {
+    "id": "fsa-mrm-011",
+    "title": "Escalation and override procedures for AI recommendations",
+    "category": "human_oversight",
+    "source": "Human-oversight procedure summary, escalation annex",
+    "tags": ["escalation", "override", "reviewer", "procedure", "approval"],
+    "content": "When a reviewer overrides or rejects an AI-generated recommendation, the override should be escalated to the designated approver and recorded with the reviewer's rationale. This applies whether the override is because the recommendation was inaccurate or because its wording risked a definitive-judgment breach."
+  },
+  {
+    "id": "fsa-mrm-012",
+    "title": "Recording reviewer decisions in the oversight log",
+    "category": "human_oversight",
+    "source": "Human-oversight procedure summary, audit-trail annex",
+    "tags": ["reviewer", "decision", "log", "oversight", "audit trail"],
+    "content": "Every reviewer decision on an AI-generated recommendation — approval, rejection, or a requested edit — should be recorded in the oversight log with a timestamp, the reviewer's identity, and a brief rationale. The log is the primary evidence a later audit or FSA inquiry relies on to confirm the oversight gate was actually exercised, not merely present in the workflow diagram."
+  }
+]

@@ -1,0 +1,13 @@
+# Runtime parameters — loaded by AgentRegistry, passed as Graph(config=...).
+# Separate from config/agent.yaml (the static manifest).
+
+max_retry: 3
+timeout_s: 30
+
+# Retrieval tuning. Read at runtime by the outer graph and forwarded into the
+# inner domain workflow, which republishes it into inner state so the retrieval
+# and rerank nodes read these values rather than their module defaults.
+retrieval:
+  top_k: 4
+  score_threshold: 0.25
+  kb_path: "config/kb/fsa_mrm_kb.json"
